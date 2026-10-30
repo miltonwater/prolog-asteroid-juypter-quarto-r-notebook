@@ -26,28 +26,19 @@ jupyter: python3
 
 ## Installation
 
-Download SWI-Prolog runtimes
+For installation instructions, see
+[Installation Guide](installation.qmd).
 
-<https://www.swi-prolog.org/download/stable>
+## Getting Started
 
-Download Docker Desktop (Windows)
+Getting your first database running, see
+[Getting Started](getting_started.qmd).
 
-<https://docs.docker.com/desktop/setup/install/windows-install/>
 
-Note will install WSL (Windows Services in Linux).
+## Quarto Notebooks
 
-\*\*Tip As an IT administrator, you can use endpoint management (MDM)
-software to identify the number of Docker Desktop instances and their
-versions within your environment. This can provide accurate license
-reporting, help ensure your machines use the latest version of Docker
-Desktop, and enable you to enforce sign-in.
-
-Intune Jamf Kandji Kolide Workspace One
-
-<https://docs.docker.com/desktop/setup/install/windows-install/#wsl-verification-and-setup>
-
-Download Docker Engine (Linux) 
-<https://docs.docker.com/engine/install/>
+Next level notebooks with python and markdown
+[Juypter Engine Notebook](python/introduction.qmd)
 
 ## Lab
 

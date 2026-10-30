@@ -24,6 +24,13 @@ jupyter: python3
 
 # Getting Started - Prolog && Asteroid
 
+```{powershell}
+
+docker pull swipl/swish
+
+docker run -d -name Prolog-SWISH -p 127.0.0.1:3050:3050 -v prolog-swish-data:/rules swipl/swish
+```
+
 Two tired parents
 
 ```{python}

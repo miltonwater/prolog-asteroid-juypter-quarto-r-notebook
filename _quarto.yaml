@@ -37,12 +37,12 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Measurements"
+      - section: "Getting Started"
         contents:
-          - measurements.qmd
-      - section: "Free fall"
+          - getting_started.qmd
+      - section: "Installation"
         contents:
-          - free_fall.qmd
+          - installation.qmd
   page-footer: 
     left: "Copyright 2026, automated merchandising" 
     right: 
