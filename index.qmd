@@ -1,0 +1,260 @@
+---
+### quarto qmd header ###
+title: "Prolog && Asteroid"
+author: "miltonwater"
+date: today
+format: 
+  html: 
+    toc: true
+    toc-location: left
+    self-contained: true
+    theme: cosmo
+
+output-dir: _output
+code-fold: true
+freeze: auto
+editor: 
+  source: 
+    wrap: 72
+# engine: knitr
+# knitr: true
+engine: jupyter
+jupyter: python3
+---
+
+# Prolog && Asteroid
+
+## Installation
+
+Download SWI-Prolog runtimes
+
+<https://www.swi-prolog.org/download/stable>
+
+Download Docker Desktop (Windows)
+
+<https://docs.docker.com/desktop/setup/install/windows-install/>
+
+Note will install WSL (Windows Services in Linux).
+
+\*\*Tip As an IT administrator, you can use endpoint management (MDM)
+software to identify the number of Docker Desktop instances and their
+versions within your environment. This can provide accurate license
+reporting, help ensure your machines use the latest version of Docker
+Desktop, and enable you to enforce sign-in.
+
+Intune Jamf Kandji Kolide Workspace One
+
+<https://docs.docker.com/desktop/setup/install/windows-install/#wsl-verification-and-setup>
+
+Download Docker Engine (Linux) 
+<https://docs.docker.com/engine/install/>
+
+## Lab
+
+1.  Purpose
+2.  Procedure (Instructions for the lab)
+3.  Tables
+4.  Calculations
+5.  Uncertainty (% error)
+6.  Conclusion (restating your purpose, values, and sources of error)
+
+### quarto - jupyter - python
+
+Jupyter is available in this Python installation. Install with:
+
+``` bash
+#rm -rf .venv
+py -3.13 -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --upgrade pip
+py -m pip install jupyter
+py -m pip freeze
+```
+
+## Running Code
+
+When you click the **Render** button a document will be generated that
+includes both content and the output of embedded code. You can embed
+code like this:
+
+```{python}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{python}
+#| echo: false
+2 * 2
+```
+
+To print, press {{< kbd Shift-Ctrl-P >}}. To open an existing new
+project, press
+{{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+
+![An elephant](images/elephant.jpg){.lightbox}
+
+# Markdown Basics
+
+## Equations
+
+\[Quarto -
+Equations\]<https://quarto.org/docs/authoring/markdown-basics.html#equations>
+
+inline math: $E = mc^{2}$
+
+display math:
+
+$$E = mc^{2}$$
+
+## Text Formatting
+
+\[Quarto - Text
+Formatting\]<https://quarto.org/docs/authoring/markdown-basics.html#text-formatting>
+
+*italics*, **bold**, ***bold italics***
+
+superscript^2^ / subscript~2~
+
+`verbatim code`
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+<https://quarto.org>
+
+[Quarto](https://quarto.org)
+
+![Caption](images/elephant.jpg)
+
+[![Caption](images/elephant.jpg)](https://quarto.org)
+
+[![Caption](images/elephant.jpg "An elephant")](https://quarto.org)
+
+[![](images/elephant.jpg){fig-alt="Alt text"}](https://quarto.org)
+
+- unordered list
+
+  - sub-item 1
+  - sub-item 2
+    - sub-sub-item 1
+
+- item 2
+
+  Continued (indent 4 spaces)
+
+1.  ordered list
+
+2.  item 2
+
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+3.  ordered list
+
+4.  item 2
+
+    A.  sub-sub-item 1
+
+- [ ] Task 1
+- [x] Task 2
+
+::: {}
+1.  A list
+:::
+
+::: {}
+1.  Followed by another list
+:::
+
+term
+
+: definition
+
+> Blockquote
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+
+page 1
+
+{{< pagebreak >}}
+
+page 2
+
+| Line Block
+|   Spaces and newlines
+|   are preserved
+
+::: classname
+Div
+:::
+
+::: border
+This content can be styled with a border
+:::
+
+```         
+<div class="border">
+  <p>This content can be styled with a border</p>
+</div>
+```
+
+:::: {#special .sidebar}
+::: warning
+Here is a warning.
+:::
+
+More content.
+::::
+
+```         
+<div id="special" class="sidebar">
+  <div class="warning">
+    <p>Here is a warning.</p>
+  </div>
+  <p>More content.</p>
+</div>
+```
+
+[This is *some text*]{.class key="val"}
+
+```         
+[This is *some text*]{.class key="val"}
+```
+
+[This is good]{#id .class key1="val1" key2="val2"}
+
+```         
+[This is good]{#id .class key1="val1" key2="val2"}
+```
+
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`,
+`warning`, `caution`, and `important`.
+:::
+
+```         
+:::{.callout-note}
+Note that there are five types of callouts, including: 
+`note`, `tip`, `warning`, `caution`, and `important`.
+:::
+```
+
+endash: --
+
+emdash: ---

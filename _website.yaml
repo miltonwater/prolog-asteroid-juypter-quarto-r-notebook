@@ -1,0 +1,8 @@
+website:
+  navbar:
+    background: primary
+    left:
+      - href: getting_started.qmd
+        text: Getting Started
+      - href: installation.qmd
+        text: Installation

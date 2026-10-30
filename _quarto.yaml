@@ -1,0 +1,53 @@
+### quarto project settings ###
+project:
+  title: "Quarto website project"
+  type: website
+  output-dir: _output
+# execute:
+#   engine: jupyter
+#   jupyter: python3
+
+number-sections: true
+# bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    # css: styles.css
+    toc: true
+    html-math-method: katex
+  pdf:
+    documentclass: report
+    margin-left: 30mm
+    margin-right: 30mm
+
+metadata-files:
+  - _metadata.yaml
+  - _website.yaml
+  
+# resources:
+#  - "sheet.xlsx"
+
+default-image-extension: jpg
+website:
+  open-graph:
+    locale: es_ES
+    site-name: Quarto
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Measurements"
+        contents:
+          - measurements.qmd
+      - section: "Free fall"
+        contents:
+          - free_fall.qmd
+  page-footer: 
+    left: "Copyright 2026, automated merchandising" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/
+  back-to-top-navigation: true
