@@ -1,0 +1,12 @@
+{
+  "hash": "c8b1123017dc75fb6c3ef999882efc1e",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\n### quarto qmd header ###\ntitle: \"Prolog && Asteroid - Installation - prolog(Logic, fundamentals)\"\nauthor: \"miltonwater\"\ndate: today\nformat: \n  html: \n    toc: true\n    toc-location: left\n    self-contained: true\n    theme: cosmo\n\noutput-dir: _output\ncode-fold: true\nfreeze: auto\neditor: \n  source: \n    wrap: 72\n# engine: knitr\n# knitr: true\nengine: jupyter\njupyter: python3\n---\n\n# Installation\n\nDownload SWI-Prolog runtimes\n\n<https://www.swi-prolog.org/download/stable>\n\nDownload Docker Desktop (Windows)\n\n<https://docs.docker.com/desktop/setup/install/windows-install/>\n\nNote will install WSL (Windows Services in Linux).\n\n\\*\\*Tip As an IT administrator, you can use endpoint management (MDM)\nsoftware to identify the number of Docker Desktop instances and their\nversions within your environment. This can provide accurate license\nreporting, help ensure your machines use the latest version of Docker\nDesktop, and enable you to enforce sign-in.\n\nIntune Jamf Kandji Kolide Workspace One\n\n<https://docs.docker.com/desktop/setup/install/windows-install/#wsl-verification-and-setup>\n\nDownload Docker Engine (Linux) \n\n<https://docs.docker.com/engine/install/>\n\n",
+    "supporting": [
+      "installation_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

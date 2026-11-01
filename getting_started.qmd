@@ -24,12 +24,22 @@ jupyter: python3
 
 # Getting Started - Prolog && Asteroid
 
-```{powershell}
+Just double check Docker is running.
+
+** CAUTION WILL RUN SCRIPT BELOW **
+```{cmd}
+docker --version
 
 docker pull swipl/swish
 
-docker run -d -name Prolog-SWISH -p 127.0.0.1:3050:3050 -v prolog-swish-data:/rules swipl/swish
+docker run -d --name Prolog-SWISH -p 127.0.0.1:3050:3050 -v prolog-swish-data:/rules swipl/swish
+
+docker ps
 ```
+
+[![](images/swipl_swish_running.jpg){fig-alt="Docker container is running"}](https://quarto.org)
+
+<http://localhost:3050/>
 
 Two tired parents
 
@@ -73,12 +83,10 @@ print(f"v2i: {v2i:.2f} N")
 ```
 
 ## Momentum
- $$ p = m * v $$
-p is amount of momentum (a vector)
-m is mass
-v is amount of velocity (a vector)
-units are kg * m / s
-units of mass times unit of velocity
+
+$$ p = m * v $$ p is amount of momentum (a vector) m is mass v is amount
+of velocity (a vector) units are kg \* m / s units of mass times unit of
+velocity
 
 ```{python}
 import math
@@ -105,7 +113,7 @@ Staying the same.
 
 "objects stick together"
 
-* no net force on it from things outside of the system.
+- no net force on it from things outside of the system.
 
 $$ momentum = m1 * v1i + m2 * v2i = m1 * v1f + m2 * v2f $$
 
@@ -134,7 +142,6 @@ print(f"vf: {vf:.2f} N")
 # k_e =  0.5 * m1 * (vi ^ 2) + 0.5 * m2 * (v2i ^ 2)
 # k_e_f = 0.5 * m * (vf ^ 2)
 ```
-
 
 ```{python}
 import math
@@ -166,6 +173,7 @@ print(f"net_work: {net_work:.4f} J")
 ```
 
 find velocity final
+
 ```{python}
 import math
 
@@ -190,7 +198,7 @@ print(f"Normal force: {normal_force:.2f}")
 
 kinetic_friction = coeff_static_friction * normal_force
 print(f"Kinetic Friction: {kinetic_friction:.4f} N magnitude")
-``` 
+```
 
 ## Max friction
 
@@ -247,7 +255,7 @@ print(f"Net force X: {net_force_x:.2f} N upward")
 
 acceleration_x = a_x = gravity * (coeff_static_friction * (cos_theta - sin_theta))
 print(f"Acceleration X: {acceleration_x:.4f} m/s^2")
-``` 
+```
 
 ### Tension && Y Acceleration
 
@@ -279,6 +287,7 @@ assert abs((tension_force + person2_force - weight) - net_force_y) < 1e-10
 ```
 
 ### Pinball
+
 Up ramp
 
 ```{python}
@@ -301,7 +310,9 @@ print(f"Acceleration Y: {a_y:.2f} m/s^2 'Perpendicular'")
 mass = normal_force / (gravity * cos_theta)
 print(f"Mass: {mass:.2f} kg")
 ```
+
 ### Elevator && Weight
+
 Positive y direction is upward
 
 ```{python}
@@ -326,11 +337,10 @@ print(f"Acceleration Y: {a_y:.2f} m/s^2")
 ```
 
 ## Gravity
-force of gravity is called weight
-w = m * g
-w is weight
-m is mass
-g is gravity # meters per second squared
+
+force of gravity is called weight w = m \* g w is weight m is mass g is
+gravity \# meters per second squared
+
 ```{python}
 import math
 
@@ -339,9 +349,10 @@ g = -9.80 #m/s^2
 ```
 
 ## Tension
-same force just opposite direction
-<---->
-** what is the magnitude of friction? **
+
+same force just opposite direction \<----\> \*\* what is the magnitude
+of friction? \*\*
+
 ```{python}
 f = 0
 breeze_right = 10 # newtons
@@ -388,9 +399,10 @@ print("Proton mass:", const.proton_mass)
 ```
 
 ## Tension
-same force just opposite direction
-<---->
-** what is the magnitude of friction? **
+
+same force just opposite direction \<----\> \*\* what is the magnitude
+of friction? \*\*
+
 ```{python}
 f = 0
 breeze_right = 10 # newtons
@@ -488,22 +500,19 @@ print(f"Final velocity: {v_f:.2f} m/s")
 print(f"Displacement: {delta_x:.2f} m")
 ```
 
-7. Lab report structure
-Purpose: What the experiment investigates.
-Procedure: Steps followed during the experiment.
-Tables: Measurements and recorded observations.
-Calculations: Formulas, substitutions, units, and results.
-Uncertainty or percent error: Compare experimental
-and accepted values when appropriate.
-Conclusion: Restate the purpose, summarize findings,
-and discuss sources of error.
+7.  Lab report structure Purpose: What the experiment investigates.
+    Procedure: Steps followed during the experiment. Tables:
+    Measurements and recorded observations. Calculations: Formulas,
+    substitutions, units, and results. Uncertainty or percent error:
+    Compare experimental and accepted values when appropriate.
+    Conclusion: Restate the purpose, summarize findings, and discuss
+    sources of error.
 
 ### quarto - jupyter - python
 
-Jupyter is available in this Python installation.
-Install with:
+Jupyter is available in this Python installation. Install with:
 
-```bash
+``` bash
 #rm -rf .venv
 py -3.13 -m venv .venv
 source .venv/Scripts/activate
@@ -511,22 +520,27 @@ python -m pip install --upgrade pip
 py -m pip install jupyter
 py -m pip freeze
 ```
+
 ## Running Code
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+When you click the **Render** button a document will be generated that
+includes both content and the output of embedded code. You can embed
+code like this:
 
 ```{python}
 1 + 1
 ```
 
-You can add options to executable code like this 
+You can add options to executable code like this
 
 ```{python}
 #| echo: false
 2 * 2
 ```
 
-To print, press {{< kbd Shift-Ctrl-P >}}. To open an existing new project, press {{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
+To print, press {{< kbd Shift-Ctrl-P >}}. To open an existing new
+project, press
+{{< kbd mac=Shift-Command-O win=Shift-Control-O linux=Shift-Ctrl-L >}}.
 
 ![An elephant](images/elephant.jpg){.lightbox}
 
@@ -534,7 +548,8 @@ To print, press {{< kbd Shift-Ctrl-P >}}. To open an existing new project, press
 
 ## Equations
 
-[Quarto - Equations]<https://quarto.org/docs/authoring/markdown-basics.html#equations>
+\[Quarto -
+Equations\]<https://quarto.org/docs/authoring/markdown-basics.html#equations>
 
 inline math: $E = mc^{2}$
 
@@ -544,7 +559,8 @@ $$E = mc^{2}$$
 
 ## Text Formatting
 
-[Quarto - Text Formatting]<https://quarto.org/docs/authoring/markdown-basics.html#text-formatting>
+\[Quarto - Text
+Formatting\]<https://quarto.org/docs/authoring/markdown-basics.html#text-formatting>
 
 *italics*, **bold**, ***bold italics***
 
@@ -564,7 +580,6 @@ superscript^2^ / subscript~2~
 
 <https://quarto.org>
 
-
 [Quarto](https://quarto.org)
 
 ![Caption](images/elephant.jpg)
@@ -575,37 +590,42 @@ superscript^2^ / subscript~2~
 
 [![](images/elephant.jpg){fig-alt="Alt text"}](https://quarto.org)
 
-* unordered list
-  + sub-item 1
-  + sub-item 2
+- unordered list
+
+  - sub-item 1
+  - sub-item 2
     - sub-sub-item 1
-    
-*   item 2
 
-    Continued (indent 4 spaces)
-    
-1. ordered list
-2. item 2
-   i) sub-item 1
-      A.  sub-sub-item 1
-      
-1. ordered list
-2. item 2
+- item 2
 
-   A.  sub-sub-item 1
-   
+  Continued (indent 4 spaces)
+
+1.  ordered list
+
+2.  item 2
+
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+3.  ordered list
+
+4.  item 2
+
+    A.  sub-sub-item 1
+
 - [ ] Task 1
 - [x] Task 2
 
 ::: {}
-1. A list
+1.  A list
 :::
 
 ::: {}
-1. Followed by another list
+1.  Followed by another list
 :::
 
 term
+
 : definition
 
 > Blockquote
@@ -630,61 +650,60 @@ page 2
 |   Spaces and newlines
 |   are preserved
 
-::: {.classname}
+::: classname
 Div
 :::
 
-::: {.border}
+::: border
 This content can be styled with a border
 :::
 
-````
+```         
 <div class="border">
   <p>This content can be styled with a border</p>
 </div>
-````
+```
 
-::::: {#special .sidebar}
-
-::: {.warning}
+:::: {#special .sidebar}
+::: warning
 Here is a warning.
 :::
 
 More content.
-:::::
+::::
 
-````
+```         
 <div id="special" class="sidebar">
   <div class="warning">
     <p>Here is a warning.</p>
   </div>
   <p>More content.</p>
 </div>
-````
+```
 
 [This is *some text*]{.class key="val"}
 
-````
+```         
 [This is *some text*]{.class key="val"}
-````
+```
 
 [This is good]{#id .class key1="val1" key2="val2"}
 
-````
+```         
 [This is good]{#id .class key1="val1" key2="val2"}
-````
+```
 
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`,
+`warning`, `caution`, and `important`.
+:::
+
+```         
 :::{.callout-note}
 Note that there are five types of callouts, including: 
 `note`, `tip`, `warning`, `caution`, and `important`.
 :::
-
-````
-:::{.callout-note}
-Note that there are five types of callouts, including: 
-`note`, `tip`, `warning`, `caution`, and `important`.
-:::
-````
+```
 
 endash: --
 
@@ -694,7 +713,8 @@ emdash: ---
 
 ## Equations
 
-[Quarto - Equations]<https://quarto.org/docs/authoring/markdown-basics.html#equations>
+\[Quarto -
+Equations\]<https://quarto.org/docs/authoring/markdown-basics.html#equations>
 
 inline math: $E = mc^{2}$
 
@@ -704,7 +724,8 @@ $$E = mc^{2}$$
 
 ## Text Formatting
 
-[Quarto - Text Formatting]<https://quarto.org/docs/authoring/markdown-basics.html#text-formatting>
+\[Quarto - Text
+Formatting\]<https://quarto.org/docs/authoring/markdown-basics.html#text-formatting>
 
 *italics*, **bold**, ***bold italics***
 
@@ -724,7 +745,6 @@ superscript^2^ / subscript~2~
 
 <https://quarto.org>
 
-
 [Quarto](https://quarto.org)
 
 ![Caption](images/elephant.jpg)
@@ -735,43 +755,42 @@ superscript^2^ / subscript~2~
 
 [![](images/elephant.jpg){fig-alt="Alt text"}](https://quarto.org)
 
-* unordered list
-  + sub-item 1
-  + sub-item 2
+- unordered list
+
+  - sub-item 1
+  - sub-item 2
     - sub-sub-item 1
-    
-*   item 2
 
-    Continued (indent 4 spaces)
-    
-1. ordered list
-2. item 2
-   i) sub-item 1
-      A.  sub-sub-item 1
-      
-1. ordered list
-2. item 2
+- item 2
 
-   A.  sub-sub-item 1
-   
+  Continued (indent 4 spaces)
+
+1.  ordered list
+
+2.  item 2
+
+    i)  sub-item 1
+        A.  sub-sub-item 1
+
+3.  ordered list
+
+4.  item 2
+
+    A.  sub-sub-item 1
+
 - [ ] Task 1
 - [x] Task 2
 
-(@)  A list whose numbering
-
-continues after
-
-(@)  an interruption
-
 ::: {}
-1. A list
+1.  A list
 :::
 
 ::: {}
-1. Followed by another list
+1.  Followed by another list
 :::
 
 term
+
 : definition
 
 > Blockquote
@@ -796,61 +815,60 @@ page 2
 |   Spaces and newlines
 |   are preserved
 
-::: {.classname}
+::: classname
 Div
 :::
 
-::: {.border}
+::: border
 This content can be styled with a border
 :::
 
-````
+```         
 <div class="border">
   <p>This content can be styled with a border</p>
 </div>
-````
+```
 
-::::: {#special .sidebar}
-
-::: {.warning}
+:::: sidebar
+::: warning
 Here is a warning.
 :::
 
 More content.
-:::::
+::::
 
-````
+```         
 <div id="special" class="sidebar">
   <div class="warning">
     <p>Here is a warning.</p>
   </div>
   <p>More content.</p>
 </div>
-````
+```
 
 [This is *some text*]{.class key="val"}
 
-````
+```         
 [This is *some text*]{.class key="val"}
-````
+```
 
+[This is good]{.class key1="val1" key2="val2"}
+
+```         
 [This is good]{#id .class key1="val1" key2="val2"}
+```
 
-````
-[This is good]{#id .class key1="val1" key2="val2"}
-````
+::: callout-note
+Note that there are five types of callouts, including: `note`, `tip`,
+`warning`, `caution`, and `important`.
+:::
 
+```         
 :::{.callout-note}
 Note that there are five types of callouts, including: 
 `note`, `tip`, `warning`, `caution`, and `important`.
 :::
-
-````
-:::{.callout-note}
-Note that there are five types of callouts, including: 
-`note`, `tip`, `warning`, `caution`, and `important`.
-:::
-````
+```
 
 endash: --
 

@@ -1,6 +1,6 @@
 ---
 ### quarto qmd header ###
-title: "Installation - Prolog && Asteroid"
+title: "Prolog && Asteroid - Installation - prolog(Logic, fundamentals)"
 author: "miltonwater"
 date: today
 format: 

@@ -1,0 +1,49 @@
+---
+### quarto qmd header ###
+title: "Installation - Prolog && Asteroid"
+author: "miltonwater"
+date: today
+format: 
+  html: 
+    toc: true
+    toc-location: left
+    self-contained: true
+    theme: cosmo
+
+output-dir: _output
+code-fold: true
+freeze: auto
+editor: 
+  source: 
+    wrap: 72
+# engine: knitr
+# knitr: true
+engine: jupyter
+jupyter: python3
+---
+
+# Installation
+
+Download SWI-Prolog runtimes
+
+<https://www.swi-prolog.org/download/stable>
+
+Download Docker Desktop (Windows)
+
+<https://docs.docker.com/desktop/setup/install/windows-install/>
+
+Note will install WSL (Windows Services in Linux).
+
+\*\*Tip As an IT administrator, you can use endpoint management (MDM)
+software to identify the number of Docker Desktop instances and their
+versions within your environment. This can provide accurate license
+reporting, help ensure your machines use the latest version of Docker
+Desktop, and enable you to enforce sign-in.
+
+Intune Jamf Kandji Kolide Workspace One
+
+<https://docs.docker.com/desktop/setup/install/windows-install/#wsl-verification-and-setup>
+
+Download Docker Engine (Linux) 
+
+<https://docs.docker.com/engine/install/>
