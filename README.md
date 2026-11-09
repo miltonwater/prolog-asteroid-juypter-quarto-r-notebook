@@ -1,7 +1,19 @@
 Prolog Asteriod - juypter notebooks
 ================
 miltonwater
-30 October, 2026
+08 November, 2026
+
+# Readme - Prolog Asteriod - juypter notebooks
+
+After making changes ‘make.’ will reload rules.
+
+``` batch
+make.
+```
+
+SWI-Prolog rules and queries.
+
+## Predicate
 
 Roughly speaking, a predicate is recursively defined if one or more
 rules in its definition refers to itself.

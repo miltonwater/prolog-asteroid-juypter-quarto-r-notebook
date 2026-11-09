@@ -1,4 +1,26 @@
-% a simple prolog program
+---
+### quarto qmd header ###
+title: "Getting Started - Prolog && Asteroid"
+author: "miltonwater"
+date: today
+format: 
+  html: 
+    toc: true
+    toc-location: left
+    self-contained: true
+    theme: cosmo
+
+output-dir: _output
+code-fold: true
+freeze: auto
+editor: 
+  source: 
+    wrap: 72
+# engine: knitr
+# knitr: true
+engine: jupyter
+jupyter: python3
+---
 woman(pam).
 woman(liz).
 woman(ann).
