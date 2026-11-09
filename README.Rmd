@@ -13,10 +13,19 @@ knitr::opts_chunk$set(
 
 # Readme - Prolog Asteriod - juypter notebooks
 
-After making changes 'make.' will reload rules.
-```{batch}
-make.
+```powershell
+swipl
 ```
+
+```prolog
+?- [PL001-family].
+?- parent(tom, X).
+?- [PL004-lists].
+?- halve([1,2,3,4,5], Odds, Evens).
+?- make.
+```
+
+'make.' will reload rules.
 
 SWI-Prolog rules and queries.
 
@@ -24,6 +33,8 @@ SWI-Prolog rules and queries.
 
 Roughly speaking, a predicate is recursively defined if one or more rules in its definition refers to itself.
 
+
+### Troubleshooting Juypter Quartro notebooks
 
 Troubleshooting Juypter and Quatro notebooks in R Studio.
 
